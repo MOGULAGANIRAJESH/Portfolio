@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #3a3a3a);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        /* Grid Layout */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Skill Card */
+        .skill-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .skill-card img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        .highlighted {
+            background: rgba(255, 87, 34, 0.8);
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skills-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968282.png" alt="Java">
+                <span>Java</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/2772/2772128.png" alt="SQL">
+                <span>SQL</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968292.png" alt="JavaScript">
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/1126/1126012.png" alt="React">
+                <span>React</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/174/174854.png" alt="HTML">
+                <span>HTML</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" alt="CSS">
+                <span>CSS</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968672.png" alt="Bootstrap">
+                <span>Bootstrap</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/10208/10208613.png" alt="MVC Architecture">
+                <span>MVC Architecture</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Spring_Framework_Logo_2018.svg" alt="Spring Boot" width="50">
+                <span>Spring Boot</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/733/733609.png" alt="GitHub">
+                <span>GitHub</span>
+            </div>
+            <div class="skill-card" onclick="toggleHighlight(this)">
+                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968350.png" alt="Python">
+                <span>Python</span>
+            </div>
+
+    <div class="skill-card" onclick="toggleHighlight(this)">
+        <img src="https://cdn-icons-png.flaticon.com/128/2772/2772128.png" alt="JDBC" width="25"> <span>JDBC</span>
+    </div>
+    <div class="skill-card" onclick="toggleHighlight(this)">
+        <img src="https://cdn-icons-png.flaticon.com/128/9390/9390695.png" alt="Microservices" width="25"><span> Microservices</span>
+    </div>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleHighlight(skillElement) {
+            skillElement.classList.toggle('highlighted');
+        }
+    </script>
+</body>
+</html>
